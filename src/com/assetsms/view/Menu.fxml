@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<MenuBar fx:id="menuBar" style="-fx-font-family: Microsoft YaHei; -fx-font-size: 16;" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assetsms.controller.MenuController">
+    <menus>
+        <Menu mnemonicParsing="false" text="资产类别管理">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#addAssetsType" text="添加资产类别" />
+                <MenuItem mnemonicParsing="false" onAction="#listAssetsType" text="资产类别列表" />
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="资产信息管理">
+            <items>
+                <MenuItem mnemonicParsing="false"  onAction="#addAssets" text="添加资产信息" />
+                <MenuItem mnemonicParsing="false"  onAction="#listAssets" text="资产信息列表" />
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="人员信息管理">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#addPerson" text="添加人员信息" />
+                <MenuItem mnemonicParsing="false" onAction="#listPerson" text="人员信息列表" />
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="资产领用管理">
+            <items>
+                <MenuItem mnemonicParsing="false"  onAction="#assetsUsing" text="资产领用" />
+                <MenuItem mnemonicParsing="false"  onAction="#listAssetsUsing" text="领用信息查询" />
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="资产归还管理">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#assetsBack" text="资产归还" />
+                <MenuItem mnemonicParsing="false" onAction="#listAssetsBack" text="归还信息查询" />
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="资产报废管理">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#assetsInvalid" text="资产报废" />
+                <MenuItem mnemonicParsing="false" onAction="#listAssetsInvalid" text="报废信息查询" />
+            </items>
+        </Menu>
+      <Menu mnemonicParsing="false"  text="系统管理">
+          <items>
+              <MenuItem mnemonicParsing="false" onAction="#returnMain" text="返回主窗口" />
+              <MenuItem mnemonicParsing="false" onAction="#exit" text="退出系统" />
+          </items>
+      </Menu>
+    </menus>
+</MenuBar>

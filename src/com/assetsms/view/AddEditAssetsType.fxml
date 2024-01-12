@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assetsms.controller.AddEditAssetsType">
+    <top>
+        <fx:include source="Menu.fxml" />
+    </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="资产大类：">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <TextField fx:id="bigTypeText">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="资产小类：">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <TextField fx:id="smallTypeText">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 20;">
+               <children>
+                  <Button mnemonicParsing="false" fx:id="submitButton" onAction="#submit" text="保存">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#reset" text="复位">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+
+</BorderPane>

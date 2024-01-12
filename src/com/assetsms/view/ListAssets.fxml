@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assetsms.controller.ListAssets">
+    <top>
+        <fx:include source="Menu.fxml" />
+    </top>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <top>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="请输入搜索内容：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <TextField fx:id="searchText" prefHeight="23.0" prefWidth="219.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font></TextField>
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <TableView fx:id="assetsListTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+
+                    <columns >
+                        <TableColumn style="-fx-alignment: center" fx:id="assetsIDColumn" prefWidth="170.0" text="资产编号" />
+                        <TableColumn style="-fx-alignment: center" fx:id="nameColumn" prefWidth="170.0" text="资产名称" />
+                        <TableColumn style="-fx-alignment: center" fx:id="typeIDColumn" prefWidth="170.0" text="所属类型" />
+                        <TableColumn style="-fx-alignment: center" fx:id="modelColumn" prefWidth="170.0" text="型号" />
+                        <TableColumn style="-fx-alignment: center" fx:id="priceColumn" prefWidth="170.0" text="价格" />
+                        <TableColumn style="-fx-alignment: center" fx:id="buyDateColumn" prefWidth="170.0" text="购买日期" />
+                        <TableColumn style="-fx-alignment: center" fx:id="statusColumn" prefWidth="170.0" text="状态" />
+                        <TableColumn style="-fx-alignment: center" fx:id="otherColumn" prefWidth="170.0" text="备注" />
+                    </columns>
+                </TableView>
+            </center>
+            <bottom>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 20;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#doDelete" text="删除">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Button>
+                        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#doUpdate" text="更新" textAlignment="CENTER">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Button>
+                    </children>
+                </HBox>
+            </bottom>
+
+        </BorderPane>
+    </center>
+
+</BorderPane>
+

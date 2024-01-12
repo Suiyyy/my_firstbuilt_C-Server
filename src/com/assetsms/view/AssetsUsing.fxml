@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assetsms.controller.AssetsUsing">
+    <top>
+        <fx:include source="Menu.fxml" />
+    </top>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <center>
+                <TableView fx:id="assetsListTable" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="assetsIDColumn" prefWidth="300.0" style="-fx-alignment: center" text="资产编号" />
+                        <TableColumn fx:id="nameColumn" prefWidth="120.0" style="-fx-alignment: center" text="资产名称" />
+                        <TableColumn fx:id="typeIDColumn" prefWidth="120.0" style="-fx-alignment: center" text="所属类型" />
+                        <TableColumn fx:id="modelColumn" prefWidth="120.0" style="-fx-alignment: center" text="型号" />
+                        <TableColumn fx:id="priceColumn" prefWidth="120.0" style="-fx-alignment: center" text="价格" />
+                        <TableColumn fx:id="buyDateColumn" prefWidth="120.0" style="-fx-alignment: center" text="购买日期" />
+                        <TableColumn fx:id="statusColumn" prefWidth="120.0" style="-fx-alignment: center" text="状态" />
+                        <TableColumn fx:id="otherColumn" prefWidth="120.0" style="-fx-alignment: center" text="备注" />
+                    </columns>
+                </TableView>
+            </center>
+        </BorderPane>
+    </center>
+    <bottom>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="资产编号：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <TextField fx:id="assetsText">
+                            <font>
+                                <Font size="16.0" />
+                            </font></TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="操作时间：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <TextField fx:id="regDateText">
+                            <font>
+                                <Font size="16.0" />
+                            </font></TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="领用人：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <ChoiceBox fx:id="personText" prefHeight="41.0" prefWidth="207.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="用途：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <TextField fx:id="purposeText">
+                            <font>
+                                <Font size="16.0" />
+                            </font></TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="备注：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <TextField fx:id="otherText">
+                            <font>
+                                <Font size="16.0" />
+                            </font></TextField>
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 20;">
+                    <children>
+                        <Button mnemonicParsing="false" fx:id="submitButton" onAction="#submit" text="领用">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#reset" text="复位">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </bottom>
+</BorderPane>

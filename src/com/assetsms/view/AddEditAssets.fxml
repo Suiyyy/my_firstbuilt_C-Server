@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assetsms.controller.AddEditAssets">
+    <top>
+        <fx:include source="Menu.fxml" />
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="资产名称：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <TextField fx:id="nameText">
+                            <font>
+                                <Font size="16.0" />
+                            </font></TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="所属类型：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <ChoiceBox fx:id="typeIDText1" prefHeight="30.0" prefWidth="162.0" />
+                        <ChoiceBox fx:id="typeIDText2" prefHeight="30.0" prefWidth="162.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="型号：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <TextField fx:id="modelText">
+                            <font>
+                                <Font size="16.0" />
+                            </font></TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="价格：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <TextField fx:id="priceText">
+                            <font>
+                                <Font size="16.0" />
+                            </font></TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="购买日期：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <TextField fx:id="buyDateText">
+                            <font>
+                                <Font size="16.0" />
+                            </font></TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="状态：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <ChoiceBox fx:id="statusText" prefHeight="41.0" prefWidth="207.0" />
+<!--                        <Label text="状态：">-->
+<!--                            <font>-->
+<!--                                <Font size="16.0" />-->
+<!--                            </font></Label>-->
+<!--                        <TextField fx:id="statusText">-->
+<!--                            <font>-->
+<!--                                <Font size="16.0" />-->
+<!--                            </font></TextField>-->
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="备注：">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <TextField fx:id="otherText">
+                            <font>
+                                <Font size="16.0" />
+                            </font></TextField>
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 20;">
+                    <children>
+                        <Button mnemonicParsing="false" fx:id="submitButton" onAction="#submit" text="保存">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#reset" text="复位">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>
+
